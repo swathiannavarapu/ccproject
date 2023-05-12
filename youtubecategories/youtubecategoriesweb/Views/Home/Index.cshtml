@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Swathi Priya Annavarapu";
+}
+@model IEnumerable<YoutubeCategories.Repository.Regions>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Select a Region
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.ActionLink(item.RegionName, "getcategories", "home", new { id = item.Id }, null)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
